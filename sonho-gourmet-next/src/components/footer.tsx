@@ -6,16 +6,16 @@ export default function Footer() {
         <footer className={Styles.footer}>
             <div className={`${Styles.logo_links} ${Styles.responsive_div}`}>
                 <div className={Styles.logo}>
-                    <img src="/LogoIMG.png"/>
+                    <img src="  /LogoIMG.png"/>
                     <p className={Styles.p}>Sonho Gourmet</p>
                 </div>
 
                 <div className={`${Styles.links} ${Styles.media_link_amor}`}>
                     <p className={Styles.p}>Links úteis</p>
                     <ul className={Styles.ul}>
-                        <li className={Styles.li}><a href="#">Home</a></li>
-                        <li className={Styles.li}><a href="#">Cardápio</a></li>
-                        <li className={Styles.li}><a href="#">Sobre</a></li>
+                        <li className={Styles.li}><a href="/">Home</a></li>
+                        <li className={Styles.li}><a href="/Cardapio">Cardápio</a></li>
+                        <li className={Styles.li}><a href="/Sobre">Sobre</a></li>
                     </ul>
                 </div>
             </div>
