@@ -1,12 +1,14 @@
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import MainDisplay from '@/components/homeDisplay'
+import NavBar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
+    <NavBar/>
     <MainDisplay></MainDisplay>
     <section>
             <div id={styles.content1Container}>
