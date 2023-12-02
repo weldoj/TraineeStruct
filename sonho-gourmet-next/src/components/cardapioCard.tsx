@@ -1,8 +1,11 @@
 import styles from "@/styles/CardapioCard.module.css"
+import { useState } from "react";
+import PopUp from "@/components/Pop-up";
 
 export default function CardapioCard(){
+    const [popup,setpopup] = useState(false)
     return(
-
+        <>
         <section className={styles.section}>  
             <div>
                 <img className={styles.img} src="/Comida1Home.png" alt="" />
@@ -16,10 +19,16 @@ export default function CardapioCard(){
             </div>
             
             <div className={styles.carrinho}>
-                <a href="#"><img src="/Group5.png" alt="" /></a>
+                <button onClick={()=>setpopup(!popup)}>
+                    <img src="/Group5.png" alt="" />
+                </button>
+                {
+                    popup && <PopUp/>
+                }
             </div>
            
         </section>
-        
+        </>
     );
 }
+

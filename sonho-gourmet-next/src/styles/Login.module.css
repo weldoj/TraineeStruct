@@ -16,8 +16,10 @@
 }
 #back{
     display: flex;
+    height: 60px;
+    
 }
-#back img{
+#back a {
     cursor: pointer;
 }
 #img{

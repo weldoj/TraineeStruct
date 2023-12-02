@@ -5,7 +5,7 @@ export default function Login(){
             <div id={styles.formContainer}>
                 <div id={styles.form}>
                     <div id={styles.back}>
-                        <img src='backButton.png'></img>
+                       <a href="/"><img src='backButton.png'></img></a>
                     </div>
                     <div id={styles.form2}>
                         <form id={styles.form3}>

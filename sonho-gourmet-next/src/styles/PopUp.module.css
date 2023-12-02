@@ -1,0 +1,10 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 753px;
+    width: 687px;
+    background-color: #FFFFFF;
+    left: 639px;
+    top: 400px;
+     
+}

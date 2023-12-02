@@ -1,10 +1,12 @@
 import CardapioCard from "@/components/cardapioCard";
 import ComboBox from "@/components/comboBox";
+import PopUp from "@/components/Pop-up";
 import styles from "@/styles/Cardapio.module.css"
 
 export default function Cardapio() {
     return (
         <>
+        
         <header className={styles.hearder}>
             <section className={styles.section_form} >
                 <form className={styles.form} action="dado.rb" method="post">
@@ -19,14 +21,12 @@ export default function Cardapio() {
             </section>
         </header>
         <main className={styles.main}>
-           
+            
             <section>
                 <CardapioCard />
                 <CardapioCard />
                 <CardapioCard />
                 <CardapioCard />
-                
-
             </section>
         </main>
         </>
