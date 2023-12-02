@@ -8,8 +8,6 @@
     margin-left: 137px;
     margin-right: 137px;
     margin-bottom: 202px;
-    
-
 }
 .div1{
     margin-bottom: 22px;
@@ -20,16 +18,15 @@
    margin-bottom: 22px;
    align-items: center;
    justify-content: space-between;
-   max-height: 100%;
 }
 .div2 p {
-   
     display: flex;
     text-align: start;
     align-items: flex-start;
     text-overflow: clip;
     align-items: center;
     overflow-wrap: break-word;
+    width: 70%;
 }
 .p {
     display: flex;
@@ -41,10 +38,37 @@
 
 
 .img {
-    height: 150%;
-    width: 150%;
+    height: 336px;
+    width: 470px;
     
 }
-.body{
-    background-color: #F5F5F5;
+
+@media screen and (max-width: 1000px) {
+    .div2 {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .div2 p {
+        width: 100%;
+    }
+    .main{
+        margin: 15px 10px 10px 10px;
+        padding: 0;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .img{
+        display: none;
+    }
+    .p {
+        width: 100%;
+    }
+    .main{
+        margin: 15px 10px 10px 10px;
+        padding: 0;
+    }
 }
