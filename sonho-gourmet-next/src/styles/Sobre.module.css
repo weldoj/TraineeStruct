@@ -8,6 +8,8 @@
     margin-left: 137px;
     margin-right: 137px;
     margin-bottom: 202px;
+    overflow-x: auto;
+
 }
 .div1{
     margin-bottom: 22px;
@@ -18,19 +20,18 @@
    margin-bottom: 22px;
    align-items: center;
    justify-content: space-between;
+
 }
 .div2 p {
     display: flex;
     text-align: start;
-    align-items: flex-start;
     text-overflow: clip;
     align-items: center;
     overflow-wrap: break-word;
-    width: 70%;
+    
 }
 .p {
     display: flex;
-    float: right;
     font-size: 22px;
     overflow-wrap: break-word;
 }

@@ -22,8 +22,8 @@
     font-size: 26px;
     border: 1px solid;
     border-radius: 10px;
-    position: fixed;
-    
+    position: absolute;
+background-color: #FFFFFF;    
 }
 .ul a{
     display: flex;
@@ -33,6 +33,6 @@
     align-items: center;
     border-top: 1px solid;
     color: black;
-    background-color: #F5F5F5;
     padding-left: 20px;
+    list-style: none;
 }
