@@ -20,20 +20,26 @@
     text-align: center;
     color: black;
     margin-right: 3rem;
+    padding-bottom: 20px;
+    
 }
-
+.nome, .email,.contato, .texto {
+    position: relative;
+    margin-bottom: 2rem;
+    overflow-x: visible;
+    margin-top: 30px;
+}
 .nome input[type="text"],
 .email input[type="email"], 
 .contato input[type="number"] {
-    width: 300px;
     display: flex;
     margin-top: 10px;
     padding: 7px;
     border-radius: 10px;
     border: 1px solid #ccc ;
     height: 45px;
-    width: 440px;
-    margin-bottom: 5px;
+    width: 470px;
+    
 }
 
 .textarea {
@@ -47,18 +53,35 @@
     border: 1px solid #ccc;
     padding-top: 10px
 }
+.span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    opacity: .5;
+    pointer-events: none;
+    
+}
+.form input:focus ~ span,
+.form textarea:focus ~ span,
+.form input:valid ~ span,
+.form textarea:valid ~ span{
+    transform: translateY(-35px);
+    opacity: 1;
+    
+}
+.form{
+    overflow-x: visible;
+}
 
-.main > section > form > div > label{
-    font-size: 20px;    
-} 
- 
 
 .main {
-
+    
     width: 100%;
     height: 70vh;
     display: flex;
     justify-content: space-around;
+    
+    
   
 }
 
@@ -78,14 +101,11 @@
     display: flex;
     justify-content: end;
     padding-top: 20px;
-    
-
 
 }
 
 
-
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 1048px) {
     .main {
         margin: 0;
     }
