@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Restaurante {
+  id Int @unique @id @default(autoincrement())
+  namo String 
+  descricao String
+  links String
+  cardapio Cardapio?
+}
+
+model Cardapio {
+  id Int @id @default(autoincrement())
+  restaurante Restaurante @relation(fields: [restauranteId], references: [id])
+  restauranteId Int @unique
+  categoria Categoria[]
+}
+
+model Categoria {
+  id Int @id @default(autoincrement())
+  cardapio Cardapio @relation(fields: [cardapioId], references: [id])
+  nome String 
+  cardapioId Int @unique
+  produtos Produtos[]
+}
+
+model Produtos {
+  id Int @id @default(autoincrement())
+  Categoria Categoria @relation(fields: [categoriaId], references: [id])
+  nome String
+  descricao String
+  preco Float
+  categoriaId Int @unique 
+  produtos_Desejos Produtos_Desejos[]
+}
+
+model Produtos_Desejos {
+  id Int @unique @id @default(autoincrement())
+  produto Produtos @relation(fields: [produtosId], references: [id])
+  listaDesejos ListaDejesos @relation(fields: [listaDesejosId], references: [id])
+  produtosId Int @unique
+  listaDesejosId Int @unique
+}
+
+model ListaDejesos {
+  id Int @id @unique @default(autoincrement())
+  produtos_Desejos Produtos_Desejos[]
+}
