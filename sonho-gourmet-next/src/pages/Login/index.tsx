@@ -6,6 +6,7 @@ export default function Login(){
                 <div id={styles.form}>
                     <div id={styles.back}>
                         <a href='/'><img src='backButton.png'></img></a>
+                       <a href="/"><img src='backButton.png'></img></a>
                     </div>
                     <div id={styles.form2}>
                         <form id={styles.form3}>

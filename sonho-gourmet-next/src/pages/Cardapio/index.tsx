@@ -1,5 +1,37 @@
-export default function Sobre() {
+import CardapioCard from "@/components/cardapioCard";
+import ComboBox from "@/components/comboBox";
+import PopUp from "@/components/Pop-up";
+import styles from "@/styles/Cardapio.module.css"
+import { useState } from "react";
+
+export default function Cardapio() {
+    
+
     return (
-        <h1>Cardapio</h1>
+        <>
+        
+        <header className={styles.hearder}>
+            <section className={styles.section_form} >
+                <form className={styles.form} action="dado.rb" method="post">
+                    <input className={styles.pesquisar} type="search" placeholder="Pesquisar..." />
+                    <button className={styles.button}>
+                        <img src="/material-symbols_search.png" alt="" />
+                    </button>
+                </form>
+            </section>
+            <section className={styles.comboBox}>
+                <ComboBox/>
+            </section>
+        </header>
+        <main className={styles.main}>
+            
+            <section>
+                <CardapioCard />
+                <CardapioCard />
+                <CardapioCard />
+                <CardapioCard />
+            </section>
+        </main>
+        </>
     )
 }

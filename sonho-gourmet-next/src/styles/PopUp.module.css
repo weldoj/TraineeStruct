@@ -1,0 +1,111 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 753px;
+    width: 687px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 156.6%;
+    background-color: rgba(49, 49, 49, 0.8);
+    
+}
+.addImg{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.nome, .descricaoDiv {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 20px;
+    
+    
+    
+    
+}
+.nome input{
+    width: 618px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+
+.descricaoDiv textarea {
+    width: 618px;
+    height: 131px;
+    resize: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+.preco_categoria{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.preco, .categoria {
+    display: flex;
+    flex-direction: column;   
+
+   
+}
+
+.preco input, .categoria input{
+    width: 303px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+    
+}
+
+.btn {
+    width: 135px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: #0086BF;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 32px;
+    margin-right: 35px;
+    font-size: 16px;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btnSair{
+    display: flex;
+    align-self: end;
+    margin-right: 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    width: 30px;
+}
+
+.fileInput{
+    display: none;
+}
+

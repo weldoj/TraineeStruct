@@ -12,7 +12,7 @@ datasource db {
 
 model Restaurante {
   id Int @unique @id @default(autoincrement())
-  namo String 
+  nome String 
   descricao String
   links String
   cardapio Cardapio?

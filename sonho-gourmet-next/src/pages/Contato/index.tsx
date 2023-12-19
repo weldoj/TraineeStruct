@@ -17,30 +17,26 @@ export default function Contato() {
         </div>
       </header>
       <main className={styles.main}>
-              <section>
-                  <form action="dado.rb" method="post">
+              <section className={styles.section}>
+                  <form className={styles.form} action="dado.rb" method="post">
                       <div className={styles.nome}>
-                          <label htmlFor="inome">Nome: </label> 
-                          <input type='text' placeholder="Digite o seu nome" value={nome} onChange={(e) => setnome(e.target.value)} />
+                          <input type='text'  value={nome} onChange={(e) => setnome(e.target.value)} required />
+                          <span  className={styles.span}>Nome</span>
                       </div>
 
                       <div  className={styles.email}>
-                          <label htmlFor="iemail">Email: </label>
-
-                          <input type="email"  placeholder="Digite o seu email" value={email} onChange={(e) => setemail(e.target.value)}/>
+                          <input type="email" value={email} onChange={(e) => setemail(e.target.value)} required />
+                          <span  className={styles.span}>Email</span>
                       </div>
 
                       <div  className={styles.contato}>
-                          <label htmlFor="icontato">Número para contato: </label>
-
-                          <input type="number"  placeholder="Digite o seu numero" value={numContato} onChange={(e) => setnumContato(e.target.value)}/>
+                          <input type="number"  value={numContato} onChange={(e) => setnumContato(e.target.value)} required/>
+                          <span  className={styles.span}>Número para contato</span>
                       </div>
 
-                      <div className={styles.Texto}>
-                          <label htmlFor="ineed">Conte-nos do que precisa:</label>
-                          <br />
-                          <textarea className={styles.textarea} placeholder="Clique para inserir ..." value={contenos} onChange={(e) => setcontenos(e.target.value)} />
-
+                      <div className={styles.texto}>
+                          <textarea className={styles.textarea} value={contenos} onChange={(e) => setcontenos(e.target.value)} required/>
+                          <span  className={styles.span}>Conte-nos do que precisa</span>
                       </div>
                       <div className={styles.enviar}>
                           <button>Enviar</button>

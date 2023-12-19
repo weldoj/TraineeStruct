@@ -4,7 +4,7 @@ async function seed() {
     //Create:
     await prisma.restaurante.create({
         data: {
-            namo: "Sonho Goumert",
+            nome: "Sonho Goumert",
             descricao: "um restaurante",
             links: "restaurante.com"
         }
