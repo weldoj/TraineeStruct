@@ -16,9 +16,7 @@
 }
 #back{
     display: flex;
-}
-#back img{
-    cursor: pointer;
+    height: 4rem;
 }
 #img{
     background-image: url("/ComidaLogin.png");
