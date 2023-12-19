@@ -1,0 +1,27 @@
+#imgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 30rem;
+    background-image: url("/ComidaHome.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+}
+#logo{
+    background-image: url(/LogoMainDisplay.svg);
+    width: 100%;
+    height: 17rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#title{
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    font-size: 76px;
+    justify-content: center;
+    text-shadow: 2px  2px 2px black;
+}

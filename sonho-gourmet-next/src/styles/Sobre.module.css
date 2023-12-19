@@ -1,0 +1,50 @@
+.h1 {
+    padding-top: 54px;
+    display: flex;
+    justify-content: center;
+}
+.main {
+    margin-top: 21px;
+    margin-left: 137px;
+    margin-right: 137px;
+    margin-bottom: 202px;
+    
+
+}
+.div1{
+    margin-bottom: 22px;
+}
+
+.div2{
+   display: flex;
+   margin-bottom: 22px;
+   align-items: center;
+   justify-content: space-between;
+   max-height: 100%;
+}
+.div2 p {
+   
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    text-overflow: clip;
+    align-items: center;
+    overflow-wrap: break-word;
+}
+.p {
+    display: flex;
+    float: right;
+    font-size: 22px;
+    overflow-wrap: break-word;
+}
+
+
+
+.img {
+    height: 150%;
+    width: 150%;
+    
+}
+.body{
+    background-color: #F5F5F5;
+}
