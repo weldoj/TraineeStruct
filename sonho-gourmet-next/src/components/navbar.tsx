@@ -12,6 +12,7 @@ export default function NavBar(){
                 <a href="/Cardapio" className={styles.linkNav}><div className={styles.mainNavButton}>Cardápio</div></a>
                 <a href="/Sobre" className={styles.linkNav}><div className={styles.mainNavButton}>Sobre</div></a>
                 <a href="/Contato" className={styles.linkNav}><div className={styles.mainNavButton}>Contatos</div></a>
+                <a href="/Carrinho "className={styles.linkNav}><div className={styles.mainNavButton}>Carrinho</div></a>
             </div>
             <a href="/Login" className={styles.linkNav}>
                 <div id={styles.login}>

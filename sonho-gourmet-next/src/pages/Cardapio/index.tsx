@@ -9,12 +9,13 @@ import { useState } from "react";
 
 export const getServerSideProps = (async () => {
     const produtos = await getProdutos()
+    const categoria = await getCategoria({id: 1})
     
-    return { props: {produtos} };
+    return { props: {categoria ,produtos} };
   }) satisfies GetServerSideProps;
   
+  
 export default function Cardapio(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
-    
     const [popup,setpopup] = useState(false)
     
    
@@ -54,7 +55,7 @@ export default function Cardapio(props: InferGetServerSidePropsType<typeof getSe
                             <div className={styles.informacoes}>
                                 <h1 >{item.nome}</h1>
                                 <p className={styles.p}>{item.descricao}</p>
-                                <h2 className={styles.h2}>{item.categoriaId}</h2>
+                                <h2 className={styles.h2}>{props.categoria.nome}</h2>
                                 <h3 >R$ {item.preco}</h3>
                             </div>
                         </CardapioCard>

@@ -4,15 +4,23 @@ import prisma from "../../../../prisma";
 async function handler(req: NextApiRequest, res: NextApiResponse){
     if(req.query.slug === "read" && req.method === "GET"){
         try{
-            //const where = req.body;
-            const {id} = req.query;
-            const categoria = await prisma.categoria.findUnique({where: {id: Number(id)}});
+            const where = req.body;
+            //const {id} = req.query;
+            const categoria = await prisma.categoria.findUnique({where});
             res.status(200).json(categoria)
             }
             catch (e){
                 res.status(404).json({error: "Restaurante não encontrado"})
             }
         }
+        if (req.query.slug === "index" && req.method === "GET") {
+            try {
+              const categoria = await prisma.categoria.findMany();
+              res.status(200).json(categoria);
+            } catch (e) {
+              res.status(500).json({ error: "erro no servidor" });
+            }
+          }
     
         if(req.query.slug === "update" && req.method === "PATCH"){
             try{
