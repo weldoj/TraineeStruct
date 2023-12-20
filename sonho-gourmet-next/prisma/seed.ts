@@ -1,14 +1,8 @@
-import { prisma } from "./prisma";
+import  prisma  from ".";
 
 async function seed() {
     //Create:
-    await prisma.restaurante.create({
-        data: {
-            nome: "Sonho Goumert",
-            descricao: "um restaurante",
-            links: "restaurante.com"
-        }
-    })
+    
     
    
 }

@@ -10,26 +10,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Restaurante {
-  id Int @unique @id @default(autoincrement())
-  nome String 
-  descricao String
-  links String
-  cardapio Cardapio?
-}
+//model Restaurante {
+  //id Int @unique @id @default(autoincrement())
+  //nome String 
+  //descricao String
+  //links String
+  //cardapio Cardapio?
+//}
 
-model Cardapio {
-  id Int @id @default(autoincrement())
-  restaurante Restaurante @relation(fields: [restauranteId], references: [id])
-  restauranteId Int @unique
-  categoria Categoria[]
-}
+//model Cardapio {
+  //id Int @id @default(autoincrement())
+  //restaurante Restaurante @relation(fields: [restauranteId], references: [id])
+  //restauranteId Int @unique
+  //categoria Categoria[]
+//}
 
 model Categoria {
   id Int @id @default(autoincrement())
-  cardapio Cardapio @relation(fields: [cardapioId], references: [id])
+  //cardapio Cardapio @relation(fields: [cardapioId], references: [id])
   nome String 
-  cardapioId Int @unique
+  //cardapioId Int @unique
   produtos Produtos[]
 }
 
@@ -38,6 +38,7 @@ model Produtos {
   Categoria Categoria @relation(fields: [categoriaId], references: [id])
   nome String
   descricao String
+  foto String
   preco Float
   categoriaId Int @unique 
   produtos_Desejos Produtos_Desejos[]
@@ -46,12 +47,13 @@ model Produtos {
 model Produtos_Desejos {
   id Int @unique @id @default(autoincrement())
   produto Produtos @relation(fields: [produtosId], references: [id])
-  listaDesejos ListaDejesos @relation(fields: [listaDesejosId], references: [id])
+  listaDesejos ListaDesejos @relation(fields: [listaDesejosId], references: [id])
   produtosId Int @unique
   listaDesejosId Int @unique
 }
 
-model ListaDejesos {
+model ListaDesejos {
   id Int @id @unique @default(autoincrement())
+  quantidade Int
   produtos_Desejos Produtos_Desejos[]
 }
