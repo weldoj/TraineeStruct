@@ -3,7 +3,7 @@ import api from "../Api";
 
 type NewCategoria = {
   name: string;
-  produtos: Produtos[]
+  produtos: Produtos[];
 };
 
 async function createCategoria(newCategoria: NewCategoria): Promise<Categoria> {

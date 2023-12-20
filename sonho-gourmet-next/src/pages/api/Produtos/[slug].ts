@@ -12,6 +12,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse){
                 res.status(404).json({error: "Produto não encontrado"})
             }
         }
+        if (req.query.slug === "index" && req.method === "GET") {
+            try {
+              const produto = await prisma.produtos.findMany();
+              res.status(200).json(produto);
+            } catch (e) {
+              res.status(500).json({ error: "erro no servidor" });
+            }
+          }
     
         if(req.query.slug === "update" && req.method === "PATCH"){
             try{

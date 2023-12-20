@@ -1,30 +1,33 @@
 import styles from "@/styles/CardapioCard.module.css"
-import { useState } from "react";
+import React, { useState } from "react";
 import PopUp from "@/components/Pop-up";
+import deleteProduto from "@/clientApi/produto/deleteProduto";
 
-export default function CardapioCard(){
+type cardProps = React.PropsWithChildren<{
+}>
+export default function CardapioCard({ children}:cardProps){
     const [popup,setpopup] = useState(false)
+     function handlerdelete(){
+        deleteProduto({id: 1}).catch(e => alert(e.response.data.error))
+     }
+    
     return(
         <>
-        <section className={styles.section}>  
-            <div>
-                <img className={styles.img} src="/Comida1Home.png" alt="" />
-            </div>         
-           
-            <div className={styles.informacoes}>
-                <h1>Rattatouille</h1>
-                <p className={styles.p} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec scelerisque diam. Donec vehicula ante risus, in tincidunt libero maximus suscipit.  </p>
-                <h2 className={styles.h2}>sobremesas</h2>
-                <h3>preço</h3>
-            </div>
-            
+        <section className={styles.section}>          
+            {children}
             <div className={styles.carrinho}>
-                <button onClick={()=>setpopup(!popup)}>
+                <button>
                     <img src="/Group5.png" alt="" />
                 </button>
                 {
                     popup && <PopUp/>
                 }
+                <button className={styles.btn_editar} onClick={()=>setpopup(!popup)}>
+                    <img src="/Group7.png" alt="" />
+                </button>
+                <button onClick={handlerdelete}>
+                    <img src="/Group6.png" alt="" />
+                </button>
             </div>
            
         </section>

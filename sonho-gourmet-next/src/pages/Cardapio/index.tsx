@@ -1,12 +1,24 @@
+import getCategoria from "@/clientApi/categoria/getCategoria";
+import getProdutos from "@/clientApi/produto/getProdutos";
 import CardapioCard from "@/components/cardapioCard";
 import ComboBox from "@/components/comboBox";
 import PopUp from "@/components/Pop-up";
 import styles from "@/styles/Cardapio.module.css"
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { useState } from "react";
 
-export default function Cardapio() {
+export const getServerSideProps = (async () => {
+    const produtos = await getProdutos()
     
-
+    return { props: {produtos} };
+  }) satisfies GetServerSideProps;
+  
+export default function Cardapio(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
+    
+    const [popup,setpopup] = useState(false)
+    
+   
+    
     return (
         <>
         
@@ -22,14 +34,32 @@ export default function Cardapio() {
             <section className={styles.comboBox}>
                 <ComboBox/>
             </section>
+            <section className={styles.adcionar}>
+                <button onClick={()=>setpopup(!popup)}>ADICIONAR <strong className={styles.strong}>+</strong></button>
+            </section>
+            {
+                popup && <PopUp/>
+            }
         </header>
         <main className={styles.main}>
             
             <section>
-                <CardapioCard />
-                <CardapioCard />
-                <CardapioCard />
-                <CardapioCard />
+                <ul>
+                    {props.produtos.map((item) => (
+                        <CardapioCard key={item.id} >
+                            
+                            <div>
+                                <img src={`/${item.foto}`} className={styles.img}  alt="" />
+                            </div>       
+                            <div className={styles.informacoes}>
+                                <h1 >{item.nome}</h1>
+                                <p className={styles.p}>{item.descricao}</p>
+                                <h2 className={styles.h2}>{item.categoriaId}</h2>
+                                <h3 >R$ {item.preco}</h3>
+                            </div>
+                        </CardapioCard>
+                    ))}
+                </ul>
             </section>
         </main>
         </>

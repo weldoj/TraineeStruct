@@ -6,6 +6,14 @@
     margin-right: 90px;
     margin-top: 106px;
 }
+
+.adcionar{
+    position: absolute;
+    top: 290px;
+    right: 290px;
+    padding-right: 0;
+    margin-right: 0; 
+}
 .section_form{
     position: relative;
 }
@@ -32,3 +40,31 @@
 }
 
 
+
+.adcionar button{
+    width: 130px;
+    height: 31px;
+    border-radius: 8px;
+    color: #02982C;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #FFFF;
+}
+.strong{
+    font-size: 18px;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    height: 188px;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    align-items: center;
+    align-items: start;
+}
+.img {
+    width: 270px;
+    height: 188px;
+    border-radius: 8px;
+}

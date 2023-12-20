@@ -1,10 +1,12 @@
-import { Produtos } from "@prisma/client";
+import { Prisma, Produtos } from "@prisma/client";
 import api from "../Api";
 
 type NewProduto = {
-  name: string;
+  nome: string;
   descricao: string;
   preco: number;
+  foto: String;
+  Categoria: String;
 
 };
 

@@ -30,7 +30,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse){
         if(req.query.slug === "create" && req.method === "POST"){
             try{
                 const data = req.body;
-                const listaDejesos = await prisma.listaDejesos.create({data});
+                const listaDejesos = await prisma.listaDesejos.create({data});
                 res.status(200).json(listaDejesos)
             }
             catch(e){
@@ -40,7 +40,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse){
         if(req.query.slug === "delete" && req.method === "DELETE"){
             try{
                 const where = req.body;
-                const listaDejesos = await prisma.listaDejesos.delete({where})
+                const listaDejesos = await prisma.listaDesejos.delete({where})
                 res.status(200).json(listaDejesos)
             }
             catch(e){

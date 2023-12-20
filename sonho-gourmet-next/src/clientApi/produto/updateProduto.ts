@@ -3,7 +3,7 @@ import api from "../Api"
 
 type ProdutoIdentifier = {id: number}
 type ProdutoNewData = {
-    name?: string,
+    name: string,
     descricao: string;
     preco: number;
     }

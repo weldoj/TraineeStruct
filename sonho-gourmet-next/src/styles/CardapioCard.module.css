@@ -37,14 +37,21 @@
 }
 
 .carrinho {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border-left: 1px solid  #DBDBDB;
     padding-left: 20px;
     align-self: center;
     padding-right: 20px;
-
+    display: flex;
+    flex-direction: column;
 }
 .carrinho button {
     border: none;
+    cursor: pointer;
+   
+}
+.btn_editar{
+    margin-top: 13px;
+    margin-bottom: 13px;
 }

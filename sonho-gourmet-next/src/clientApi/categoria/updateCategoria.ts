@@ -3,8 +3,8 @@ import api from "../Api"
 
 type CategoriaIdentifier = {id: number}
 type CategoriaNewData = {
-    name?: string,
-    produtos: Produtos[]
+    name?: string;
+    produtos: Produtos[];
     }
 
 async function updateCategoria(categoriaData: CategoriaIdentifier & CategoriaNewData): Promise<Categoria> {

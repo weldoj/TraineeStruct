@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Contato.module.css'
 import { useState } from 'react'
+import createContatos from '@/clientApi/contatos/createContatos'
 
 
 export default function Contato() {
@@ -9,6 +10,15 @@ export default function Contato() {
   const [email, setemail] = useState("")
   const [numContato, setnumContato] = useState("")
   const [contenos, setcontenos] = useState("")
+
+  function handlercreate(){
+    createContatos({
+      nome: nome,
+      email: email,
+      numeroContato: parseInt(numContato),
+      informacao: contenos
+    }).catch(e => alert(e.response.data.error))
+}
   return (
     <>
       <header>
@@ -18,7 +28,7 @@ export default function Contato() {
       </header>
       <main className={styles.main}>
               <section className={styles.section}>
-                  <form className={styles.form} action="dado.rb" method="post">
+                  <form className={styles.form} onSubmit={handlercreate}>
                       <div className={styles.nome}>
                           <input type='text'  value={nome} onChange={(e) => setnome(e.target.value)} required />
                           <span  className={styles.span}>Nome</span>
@@ -39,7 +49,7 @@ export default function Contato() {
                           <span  className={styles.span}>Conte-nos do que precisa</span>
                       </div>
                       <div className={styles.enviar}>
-                          <button>Enviar</button>
+                          <button type='submit'>Enviar</button>
                       </div>
                   </form>
               </section>
