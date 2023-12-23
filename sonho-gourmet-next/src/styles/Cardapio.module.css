@@ -1,44 +1,44 @@
 .hearder{
+    width: 100vw;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 40px;
-    margin-left: 90px;
-    margin-right: 90px;
     margin-top: 106px;
-}
-
-.adcionar{
-    position: absolute;
-    top: 290px;
-    right: 290px;
-    padding-right: 0;
-    margin-right: 0; 
-}
-.section_form{
-    position: relative;
+    gap: 10px;
 }
 
 .pesquisar {
-    width: 870px;
+    width: 42vw;
     height: 45px;
     border-radius: 10px;
-    
+    padding-left: 10px;
+}
+
+.form {
+    display: flex;
+    position: relative;
     
 }
+
 .button{
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 9px;
     background-color: #FFFF;
     border: none;
 }
 
+
 .main {
     display: flex;
     justify-content: center;
-    margin-top: 106px;
+    margin-top: 56px;
 }
 
+.adcionar{
+   display: flex;
+   justify-content: end;
+   margin-bottom: 40px;
+}
 
 
 .adcionar button{
@@ -67,4 +67,40 @@
     width: 270px;
     height: 188px;
     border-radius: 8px;
+}
+.h2{
+    background-color: #EBEBEB;
+    border-radius: 12px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.p{
+    width: 70%;
+}
+.h1{
+    font-size: 24px;
+    color: #B06100;
+}
+
+@media screen and (max-width: 1149px) {
+    .hearder{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .combo{
+        margin-top: 40px;
+    }
+
+    .adcionar{
+        justify-content: center;
+    }
+
+    .main{
+        margin-top: 30px;
+    }
+    .pesquisar{
+        width: 70vw;
+    }
 }

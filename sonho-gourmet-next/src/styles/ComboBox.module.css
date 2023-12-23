@@ -8,6 +8,7 @@
 }
 .div{
     position: relative;
+    z-index: 1;
 }
 
 .img {
@@ -23,7 +24,7 @@
     border: 1px solid;
     border-radius: 10px;
     position: absolute;
-background-color: #FFFFFF;    
+    background-color: #FFFFFF;    
 }
 .ul a{
     display: flex;
@@ -36,3 +37,4 @@ background-color: #FFFFFF;
     padding-left: 20px;
     list-style: none;
 }
+

@@ -10,7 +10,9 @@
     top: 50%;
     border-radius: 10px;
     border: 1px solid;
+    z-index: 5;
 }
+
 
 .overlay {
     position: absolute;
@@ -21,6 +23,7 @@
     width: 100%;
     height: 156.6%;
     background-color: rgba(49, 49, 49, 0.8);
+    z-index: 3;
     
 }
 .addImg{

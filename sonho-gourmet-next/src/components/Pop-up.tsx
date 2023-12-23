@@ -1,6 +1,5 @@
 import createProduto from "@/clientApi/produto/createProduto";
 import styles from "@/styles/PopUp.module.css"
-import { readFile } from "fs";
 import { useRef, useState } from "react";
 export default function PopUp(){
     const [close, setclose] = useState(true);
@@ -42,7 +41,7 @@ export default function PopUp(){
         <>
         {close && (
             <>
-            <form onSubmit={handlercreate} encType="multipart/form-data">
+            <form className={styles.form} onSubmit={handlercreate} encType="multipart/form-data">
             <div className={styles.overlay} onClick={vaifechar}></div>
             <section className={styles.section}>
                 
