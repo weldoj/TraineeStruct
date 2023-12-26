@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 106px;
-    gap: 10px;
 }
 
 .pesquisar {
@@ -82,6 +81,30 @@
     font-size: 24px;
     color: #B06100;
 }
+.contener{
+    display: flex;
+}
+
+.carrinho {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-left: 1px solid  #DBDBDB;
+    padding-left: 20px;
+    align-self: center;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.carrinho button {
+    border: none;
+    cursor: pointer;
+   
+}
+.btn_editar{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
 
 @media screen and (max-width: 1149px) {
     .hearder{
@@ -104,3 +127,72 @@
         width: 70vw;
     }
 }
+
+@media screen and (max-width: 844px) {
+    .contener{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        height: 188px;
+        width: 100%;
+        justify-content: space-between;
+        align-self: center;
+        align-items: center;
+        position: absolute;
+        gap: 30px;
+        margin-top: 30px;
+        transition: 0.5s;
+        
+        
+    }
+    .img{
+    position: relative;
+    width: 100%;
+    height: 35vh;
+   
+    }
+    .p{
+        width: 410px;
+        font-size: 20px;
+        text-shadow: 0px 0px 5px oldlace ;
+        font-weight: bold;
+        
+    }
+    .h2{
+        background-color: inherit;
+
+        
+       
+    }
+    .h1{
+        text-shadow: 0px 0px 0px black;
+      
+    }
+    .section{
+        flex-direction: column;
+        border: 1px solid #DBDBDB;
+    }
+    
+    .carrinho{
+        border-left: none;
+        flex-direction: row;
+        gap: 30px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 432px) {
+.p{
+   width: 90vw;
+}
+.informacoes{
+    transition: 0.5s;
+    margin-top: 10px;
+    gap:20px
+}
+}
+

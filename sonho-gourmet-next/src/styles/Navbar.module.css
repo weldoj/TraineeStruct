@@ -44,6 +44,7 @@
 }
 .btnMenu{
     display: none;
+    height: 100%;
     
 }
 .btnMenu button{
@@ -65,7 +66,6 @@
 
     .btnMenu{
         display: flex;
-        transition-property: all;
     }
     .menu{
         position: absolute;
@@ -73,8 +73,15 @@
         z-index: 6;
         display: flex;
         justify-content: end;
-        transition-delay: 5s;
+        transition: all .5s ease;
+        height: 100%;
+        transform: translateX(0);
+        
+        
     }
+    
+
+    
 
 }
 

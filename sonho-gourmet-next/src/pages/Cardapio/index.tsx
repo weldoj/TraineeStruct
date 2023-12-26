@@ -1,4 +1,5 @@
 import getCategoria from "@/clientApi/categoria/getCategoria";
+import deleteProduto from "@/clientApi/produto/deleteProduto";
 import getProdutos from "@/clientApi/produto/getProdutos";
 import CardapioCard from "@/components/cardapioCard";
 import ComboBox from "@/components/comboBox";
@@ -17,7 +18,8 @@ export const getServerSideProps = (async () => {
   
 export default function Cardapio(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
     const [popup,setpopup] = useState(false)
-    
+     
+     
    
     
     return (
@@ -49,15 +51,30 @@ export default function Cardapio(props: InferGetServerSidePropsType<typeof getSe
                     <ul>
                         {props.produtos.map((item) => (
                             <CardapioCard key={item.id} >                   
-                                <div>
-                                    <img src={`/${item.foto}`} className={styles.img}  alt="" />
-                                </div>       
-                                <div className={styles.informacoes}>
-                                    <h1 className={styles.h1} >{item.nome}</h1>
-                                    <p className={styles.p}>{item.descricao}</p>
-                                    <h2 className={styles.h2}>{props.categoria.nome}</h2>
-                                    <h3 >R$ {item.preco}</h3>
+                                <div className={styles.contener}>
+                                    <div>
+                                        <img src={`/${item.foto}`} className={styles.img}  alt="" />
+                                    </div>       
+                                    <div className={styles.informacoes}>
+                                        <h1 className={styles.h1} >{item.nome}</h1>
+                                        <p className={styles.p}>{item.descricao}</p>
+                                        <h2 className={styles.h2}>{props.categoria.nome}</h2>
+                                        <h3 >R$ {item.preco}</h3>
+                                    </div>
+                                    <div className={styles.carrinho}>
+                                         <button>
+                                            <img src="/Group5.png" alt="" />
+                                         </button>
+                                        <button className={styles.btn_editar} onClick={()=>setpopup(!popup)}>
+                                            <img src="/Group7.png" alt="" />
+                                        </button>
+                                        <button onClick={() => {deleteProduto({id: item.id}).catch(e => alert(e.response.data.error))}}>
+                                            <img src="/Group6.png" alt="" />
+                                        </button>
+                                    </div>
                                 </div>
+
+                                
                             </CardapioCard>
                         ))}
                     </ul>

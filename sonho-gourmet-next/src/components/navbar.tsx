@@ -3,6 +3,7 @@ import Menu from "@/components/menu";
 import { useState } from "react";
 
 export default function NavBar(){
+    
 
   const [abreMenu, setAbreMenu] = useState(false);
     return(
@@ -25,8 +26,8 @@ export default function NavBar(){
                     <div><img src='/UserIcon.png' height='80px'></img></div>
                 </div>
             </a>
-            <div className={styles.btnMenu}>
-                <button onClick={()=> setAbreMenu(!abreMenu)}>
+            <div className={styles.btnMenu} >
+                <button  onClick={()=> setAbreMenu(!abreMenu)}>
                     <img src="/Vector(1).png" alt="" />
                 </button>
                 
@@ -34,7 +35,7 @@ export default function NavBar(){
         </nav>
         {
             abreMenu && 
-            <div className={styles.menu}>
+            <div className={styles.menu} >
                 <Menu></Menu>
             </div> 
         }
